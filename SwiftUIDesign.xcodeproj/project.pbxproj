@@ -13,6 +13,7 @@
 		D494B008236B2B980019D70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D494B007236B2B980019D70C /* Assets.xcassets */; };
 		D494B00B236B2B980019D70C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D494B00A236B2B980019D70C /* Preview Assets.xcassets */; };
 		D494B00E236B2B980019D70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D494B00C236B2B980019D70C /* LaunchScreen.storyboard */; };
+		D494B016236B2D190019D70C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D494B015236B2D190019D70C /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D494B00A236B2B980019D70C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D494B00D236B2B980019D70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D494B00F236B2B980019D70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D494B015236B2D190019D70C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				D494B003236B2B980019D70C /* SceneDelegate.swift */,
 				D494B005236B2B980019D70C /* ContentView.swift */,
 				D494B007236B2B980019D70C /* Assets.xcassets */,
+				D494B015236B2D190019D70C /* Colors.xcassets */,
 				D494B00C236B2B980019D70C /* LaunchScreen.storyboard */,
 				D494B00F236B2B980019D70C /* Info.plist */,
 				D494B009236B2B980019D70C /* Preview Content */,
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D494B00E236B2B980019D70C /* LaunchScreen.storyboard in Resources */,
+				D494B016236B2D190019D70C /* Colors.xcassets in Resources */,
 				D494B00B236B2B980019D70C /* Preview Assets.xcassets in Resources */,
 				D494B008236B2B980019D70C /* Assets.xcassets in Resources */,
 			);
