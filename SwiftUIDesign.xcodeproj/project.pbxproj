@@ -14,6 +14,7 @@
 		D494B00B236B2B980019D70C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D494B00A236B2B980019D70C /* Preview Assets.xcassets */; };
 		D494B00E236B2B980019D70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D494B00C236B2B980019D70C /* LaunchScreen.storyboard */; };
 		D494B016236B2D190019D70C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D494B015236B2D190019D70C /* Colors.xcassets */; };
+		D494B01A236B99410019D70C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494B019236B99410019D70C /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D494B00D236B2B980019D70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D494B00F236B2B980019D70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D494B015236B2D190019D70C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		D494B019236B99410019D70C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D494B001236B2B980019D70C /* AppDelegate.swift */,
 				D494B003236B2B980019D70C /* SceneDelegate.swift */,
 				D494B005236B2B980019D70C /* ContentView.swift */,
+				D494B019236B99410019D70C /* Home.swift */,
 				D494B007236B2B980019D70C /* Assets.xcassets */,
 				D494B015236B2D190019D70C /* Colors.xcassets */,
 				D494B00C236B2B980019D70C /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			files = (
 				D494B002236B2B980019D70C /* AppDelegate.swift in Sources */,
 				D494B004236B2B980019D70C /* SceneDelegate.swift in Sources */,
+				D494B01A236B99410019D70C /* Home.swift in Sources */,
 				D494B006236B2B980019D70C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
