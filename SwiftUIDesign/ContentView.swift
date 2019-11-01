@@ -15,6 +15,9 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
+            // Custom blur view as UIView, SwiftUI still doesn't have a way to do it
+            BlurView(style: .extraLight)
+            
             TitleView()
                 .blur(radius: show ? 20 : 0)
                 .animation(.default)

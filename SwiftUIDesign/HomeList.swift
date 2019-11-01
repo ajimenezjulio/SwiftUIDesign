@@ -13,24 +13,39 @@ struct HomeList: View {
     @State var showContent = false
     
     var body: some View {
-        ScrollView(Axis.Set.horizontal, showsIndicators: false) {
-            HStack(spacing: 30) {
-                ForEach(courses) { item in
-                    
-                    Button(action: {
-                        self.showContent.toggle()
-                    }, label: {
-                        CourseView(title: item.title,
-                                   image: item.image,
-                                   color: item.color,
-                                   shadowColor: item.shadowColor)
-                        .sheet(isPresented: self.$showContent) { ContentView() }
-                    })
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Courses")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    Text("22 courses")
+                        .foregroundColor(.gray)
                 }
+                Spacer()
             }
-            .padding(.leading, 30)
-            Spacer()
+            .padding(.leading, 70)
+            .padding(.bottom, 40)
+            
+            ScrollView(Axis.Set.horizontal, showsIndicators: false) {
+                HStack(spacing: 30) {
+                    ForEach(courses) { item in
+                        Button(action: {
+                            self.showContent.toggle()
+                        }, label: {
+                            CourseView(title: item.title,
+                                       image: item.image,
+                                       color: item.color,
+                                       shadowColor: item.shadowColor)
+                            .sheet(isPresented: self.$showContent) { ContentView() }
+                        })
+                    }
+                }
+                .padding(.leading, 40)
+                Spacer()
+            }
         }
+        .padding(.top, 78)
     }
 }
 
@@ -55,7 +70,7 @@ struct CourseView : View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(20)
+                .padding(30)
                 .lineLimit(4)
                 // Make consistent the size of the text element for all texts
                 .padding(.trailing, 50)
