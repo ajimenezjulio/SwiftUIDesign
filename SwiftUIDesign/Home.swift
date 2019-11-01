@@ -9,23 +9,19 @@
 import SwiftUI
 
 struct Home: View {
-    var menu = menuData
+    @State var show = false
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ForEach(menu) { item in
-                MenuRow(image: item.icon, text: item.title)
-            }
-            Spacer()
+        ZStack {
+            Button(action: {
+                self.show.toggle()
+            }, label: {
+                Text("Open Menu")
+            })
+            
+            // Passing the show state and bind it
+            MenuView(show: $show)
         }
-        .padding(.top, 20)
-        .padding(30)
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .background(Color.white)
-        .cornerRadius(30)
-            // Padding in trailing so the view will shring from the right
-            .padding(.trailing, 60)
-            .shadow(radius: 20)
     }
 }
 
@@ -54,6 +50,39 @@ struct MenuRow : View {
         }
     }
 }
+
+struct MenuView : View {
+    var menu = menuData
+    // Binding because we need that this view comunicates with the parent view to control the @State show
+    @Binding var show : Bool
+    
+    var body : some View {
+        return VStack(alignment: .leading, spacing: 20) {
+            ForEach(menu) { item in
+                MenuRow(image: item.icon, text: item.title)
+            }
+            Spacer()
+        }
+        .padding(.top, 20)
+        .padding(30)
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .background(Color.white)
+        .cornerRadius(30)
+            // Padding in trailing so the view will shring from the right
+            .padding(.trailing, 60)
+            .shadow(radius: 20)
+            // The order matters, the transform should be after shadow but before animation for this case
+            .rotation3DEffect(Angle(degrees: show ? 0 : 60), axis: (x: 0, y: 10, z: 0))
+            .animation(.linear)
+            // This will place the VStack one screen off on the left
+            .offset(x: show ? 0 : -UIScreen.main.bounds.width)
+            .onTapGesture {
+                self.show.toggle()
+        }
+    }
+}
+
+// MARK: - Data Model
 
 struct Menu : Identifiable {
     var id = UUID()
