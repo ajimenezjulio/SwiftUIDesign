@@ -10,6 +10,7 @@
 		D40E5135236F153E00786580 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E5134236F153E00786580 /* UpdateList.swift */; };
 		D40E5137236F211700786580 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E5136236F211700786580 /* UpdateDetail.swift */; };
 		D40E5139236F272F00786580 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E5138236F272F00786580 /* UpdateStore.swift */; };
+		D40E513B236F3BB300786580 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E513A236F3BB300786580 /* TabBar.swift */; };
 		D46CC612236CAA7E00555093 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC611236CAA7E00555093 /* BlurView.swift */; };
 		D494B002236B2B980019D70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494B001236B2B980019D70C /* AppDelegate.swift */; };
 		D494B004236B2B980019D70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494B003236B2B980019D70C /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		D40E5134236F153E00786580 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		D40E5136236F211700786580 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		D40E5138236F272F00786580 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		D40E513A236F3BB300786580 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		D46CC611236CAA7E00555093 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		D494AFFE236B2B980019D70C /* SwiftUIDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D494B001236B2B980019D70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				D494B001236B2B980019D70C /* AppDelegate.swift */,
 				D494B003236B2B980019D70C /* SceneDelegate.swift */,
+				D40E513A236F3BB300786580 /* TabBar.swift */,
 				D494B005236B2B980019D70C /* ContentView.swift */,
 				D494B019236B99410019D70C /* Home.swift */,
 				D40E5134236F153E00786580 /* UpdateList.swift */,
@@ -177,6 +180,7 @@
 				D494B01A236B99410019D70C /* Home.swift in Sources */,
 				D494B006236B2B980019D70C /* ContentView.swift in Sources */,
 				D46CC612236CAA7E00555093 /* BlurView.swift in Sources */,
+				D40E513B236F3BB300786580 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

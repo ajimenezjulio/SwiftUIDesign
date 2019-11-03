@@ -10,8 +10,7 @@ import SwiftUI
 
 struct UpdateList: View {
     var updates = updateData
-    @State var showSettings = false
-    @ObservedObject var store = UpdateStore(updates: updateData)
+    @ObservedObject var store = UpdateStore()
     
     func move(from source: IndexSet, to destination: Int) {
         store.updates.swapAt(source.first!, destination)
@@ -26,16 +25,6 @@ struct UpdateList: View {
     
     var body: some View {
         NavigationView {
-            Button(action: {
-                self.addUpdate()
-            }) {
-                Text("Add Update")
-            }
-            .padding(8)
-            .background(Color("background3"))
-            .cornerRadius(8)
-            
-            
             List {
                 ForEach(store.updates) { item in
                     NavigationLink(destination: UpdateDetail(title: item.title,
@@ -54,7 +43,7 @@ struct UpdateList: View {
                                     .font(.headline)
                                 
                                 Text(item.text)
-                                    .lineLimit(3)
+                                    .lineLimit(2)
                                     .font(.subheadline)
                                     // Space between lines
                                     .lineSpacing(4)
@@ -76,16 +65,9 @@ struct UpdateList: View {
                 .onMove(perform: move)
             }
             .navigationBarTitle(Text("Updates"))
-            .navigationBarItems(trailing:
-                EditButton()
-//                Button(action: {
-//                    self.showSettings.toggle()
-//                }, label: {
-//                    Image(systemName: "gear")
-//                        .sheet(isPresented: self.$showSettings) {
-//                            Text("Settings")
-//                    }
-//                })
+            .navigationBarItems(
+                leading: Button(action: addUpdate) { Text("Add Update") },
+                trailing: EditButton()
             )
         }
     }
