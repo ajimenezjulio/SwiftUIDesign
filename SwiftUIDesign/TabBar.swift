@@ -15,24 +15,27 @@ struct TabBar: View {
                 Image("IconHome")
                 Text("Home")
             })
-            // We need tags to select content
-            .tag(1)
             ContentView().tabItem({
                 Image("IconCards")
                 Text("Certificates")
             })
-            .tag(2)
             UpdateList().tabItem({
                 Image("IconSettings")
                 Text("Updates")
             })
-            .tag(3)
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        Group {
+            TabBar()
+            // For now, environment only works in tab bars
+            TabBar()
+                .environment(\.colorScheme, .dark)
+                .environment(\.sizeCategory, .extraLarge)
+        }
     }
 }

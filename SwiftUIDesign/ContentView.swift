@@ -16,7 +16,8 @@ struct ContentView: View {
         ZStack {
             
             // Custom blur view as UIView, SwiftUI still doesn't have a way to do it
-            BlurView(style: .extraLight)
+            // SystemMaterial, adjust automatically between light and dark
+            BlurView(style: .systemMaterial)
             
             TitleView()
                 .blur(radius: show ? 20 : 0)
@@ -35,7 +36,7 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: show ? 15 : 0))
                 //.rotation3DEffect(Angle(degrees: show ? 50 : 0), axis: (x: 10, y: 10, z: 10))
                 .blendMode(.hardLight)
-                .animation(.easeInOut(duration: 0.7))
+                .animation(.easeInOut(duration: 0.6))
                 .offset(x: viewState.width, y: viewState.height)
             
             CardView()
@@ -47,7 +48,7 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: show ? 10 : 0))
                 //.rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: (x: 10, y: 10, z: 10))
                 .blendMode(.hardLight)
-                .animation(.easeInOut(duration: 0.5))
+                .animation(.easeInOut(duration: 0.4))
                 .offset(x: viewState.width, y: viewState.height)
             
             CertificateView()
@@ -154,10 +155,11 @@ struct CardBottomView : View {
             .frame(minWidth: 0, maxWidth: .infinity)
             .padding()
             .padding(.horizontal)
-            .background(Color.white)
+            // Instead of a constant color we can use a view that supports dark mode
+            .background(BlurView(style: .systemMaterial))
             .cornerRadius(30)
-                // The shadows need always a background color in order to be displayed
-                .shadow(radius: 20)
-                .offset(y: 600)
+            // The shadows need always a background color in order to be displayed
+            .shadow(radius: 20)
+            .offset(y: 600)
     }
 }
