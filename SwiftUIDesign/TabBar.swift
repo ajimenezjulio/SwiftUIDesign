@@ -15,16 +15,20 @@ struct TabBar: View {
                 Image("IconHome")
                 Text("Home")
             })
+            .tag(1)
+            
             ContentView().tabItem({
                 Image("IconCards")
                 Text("Certificates")
             })
-            UpdateList().tabItem({
+            .tag(2)
+            
+            Settings().tabItem({
                 Image("IconSettings")
-                Text("Updates")
+                Text("Settings")
             })
+            .tag(3)
         }
-        .edgesIgnoringSafeArea(.top)
     }
 }
 
