@@ -15,25 +15,37 @@ struct UpdateList: View {
     var body: some View {
         NavigationView {
             List(updates) { item in
-                NavigationLink(destination: Text("1")) {
-                    VStack(alignment: .leading) {
-                        Text(item.title)
-                            .font(.headline)
+                NavigationLink(destination: UpdateDetail(title: item.title,
+                                                         text: item.text,
+                                                         image: item.image)) {
+                    HStack(spacing: 12) {
+                        Image(item.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width:80, height:80)
+                            .background(Color("background"))
+                            .cornerRadius(20)
                         
-                        Text(item.text)
-                            .lineLimit(3)
-                            .font(.subheadline)
-                            // Space between lines
-                            .lineSpacing(4)
-                            // Line limit requires a frame in order to work properly
-                            .frame(height: 50)
-                        
-                        Text(item.date)
-                            .font(.caption)
-                            .fontWeight(.bold)
-                            .foregroundColor(.gray)
+                        VStack(alignment: .leading) {
+                            Text(item.title)
+                                .font(.headline)
+                            
+                            Text(item.text)
+                                .lineLimit(3)
+                                .font(.subheadline)
+                                // Space between lines
+                                .lineSpacing(4)
+                                // Line limit requires a frame in order to work properly
+                                .frame(height: 50)
+                            
+                            Text(item.date)
+                                .font(.caption)
+                                .fontWeight(.bold)
+                                .foregroundColor(.gray)
+                        }
                     }
                 }
+                .padding(.vertical, 8)
             }
             .navigationBarTitle(Text("Updates"))
             .navigationBarItems(trailing:
