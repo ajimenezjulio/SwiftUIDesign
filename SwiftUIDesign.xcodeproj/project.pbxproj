@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D40E5135236F153E00786580 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40E5134236F153E00786580 /* UpdateList.swift */; };
 		D46CC612236CAA7E00555093 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46CC611236CAA7E00555093 /* BlurView.swift */; };
 		D494B002236B2B980019D70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494B001236B2B980019D70C /* AppDelegate.swift */; };
 		D494B004236B2B980019D70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494B003236B2B980019D70C /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D40E5134236F153E00786580 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		D46CC611236CAA7E00555093 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		D494AFFE236B2B980019D70C /* SwiftUIDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D494B001236B2B980019D70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				D494B003236B2B980019D70C /* SceneDelegate.swift */,
 				D494B005236B2B980019D70C /* ContentView.swift */,
 				D494B019236B99410019D70C /* Home.swift */,
+				D40E5134236F153E00786580 /* UpdateList.swift */,
 				D494B01D236C752C0019D70C /* HomeList.swift */,
 				D46CC611236CAA7E00555093 /* BlurView.swift */,
 				D494B007236B2B980019D70C /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D494B002236B2B980019D70C /* AppDelegate.swift in Sources */,
+				D40E5135236F153E00786580 /* UpdateList.swift in Sources */,
 				D494B01E236C752C0019D70C /* HomeList.swift in Sources */,
 				D494B004236B2B980019D70C /* SceneDelegate.swift in Sources */,
 				D494B01A236B99410019D70C /* Home.swift in Sources */,
