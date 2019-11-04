@@ -29,6 +29,8 @@ struct TabBar: View {
             })
             .tag(3)
         }
+        // Ignore the edges in the parent container
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

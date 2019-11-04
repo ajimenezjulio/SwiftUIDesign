@@ -95,11 +95,13 @@ struct CardView : View {
 }
 
 struct CertificateView : View {
+    var item = Certificate(title: "UI Design", image: "Background", width: 340, height: 220)
+    
     var body: some View {
         return VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("UI Desing")
+                    Text(item.title)
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundColor(Color("accent"))
@@ -114,9 +116,12 @@ struct CertificateView : View {
             }
             .padding(.horizontal)
             Spacer()
-            Image("Background")
+            Image(item.image)
+                // These is to adjust the image when row created in CertificateRow
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .offset(y: 50)
         }
-        .frame(width: 340.0, height: 220.0)
+        .frame(width: CGFloat(item.width), height: CGFloat(item.height))
         .background(Color.black)
         .cornerRadius(10)
         .shadow(radius: 20)
@@ -160,6 +165,6 @@ struct CardBottomView : View {
             .cornerRadius(30)
             // The shadows need always a background color in order to be displayed
             .shadow(radius: 20)
-            .offset(y: 600)
+            .offset(y: UIScreen.main.bounds.height - 170)
     }
 }
